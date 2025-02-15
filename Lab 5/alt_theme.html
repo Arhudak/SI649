@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <a href="https://scmcqueen.github.io/si649_hw/reviews_by_char.csv">Data</a>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"title": {"font": "Arial", "fontSize": 20, "fontColor": "#006064", "anchor": "middle", "offset": 10}, "axis": {"labelFont": "Arial", "labelFontSize": 12, "titleFont": "Arial", "titleFontSize": 14, "grid": false}, "background": "#e0f7fa", "view": {"stroke": "transparent", "padding": {"left": 20, "right": 20, "top": 10, "bottom": 10}}, "range": {"category": ["#00796b", "#004d40", "#b2dfdb", "#004b71", "#d1c4e9", "#b3e5fc"], "sequential": ["#004b71", "#58789b", "#9bb9c9", "#e1edf7", "#f1f8e9", "#aed581"], "diverging": ["#004d40", "#00796b", "#48a999", "#ffffff", "#f48fb1", "#e57373", "#c62828"]}, "area": {"fillOpacity": 0.7, "fill": "#00796b"}, "line": {"stroke": "#004d40", "strokeWidth": 2}, "point": {"fill": "#004d40", "size": 50}, "text": {"font": "Arial", "color": "#004d40"}, "bar": {"fill": "#00796b"}}, "data": {"name": "data-7a22c6b1229dd4115e0bee06d563eda5"}, "facet": {"column": {"field": "rating", "sort": ["Favorable", "Neutral", "Unfavorable", "Unfamiliar"], "title": null, "type": "nominal"}}, "spec": {"layer": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "rating", "legend": null, "sort": ["Favorable", "Neutral", "Unfamiliar", "Unfavorable"], "type": "nominal"}, "x": {"axis": {"grid": false, "labels": false, "ticks": false, "title": null}, "field": "percent", "type": "quantitative"}, "y": {"axis": {"grid": false, "title": null}, "field": "character", "sort": ["Luke Skywalker", "Han Solo", "Princess Leia Organa", "Obi Wan Kenobi", "Yoda", "R2 D2", "C-3P0", "Anakin Skywalker", "Darth Vader", "Lando Calrissian", "Padme Amidala", "Boba Fett", "Emperor Palpatine", "Jar Jar Binks"], "type": "nominal"}}}, {"mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 3}, "encoding": {"color": {"field": "rating", "legend": null, "sort": ["Favorable", "Neutral", "Unfamiliar", "Unfavorable"], "type": "nominal"}, "text": {"field": "percent", "type": "quantitative"}, "x": {"axis": {"grid": false, "labels": false, "ticks": false, "title": null}, "field": "percent", "type": "quantitative"}, "y": {"axis": {"grid": false, "title": null}, "field": "character", "sort": ["Luke Skywalker", "Han Solo", "Princess Leia Organa", "Obi Wan Kenobi", "Yoda", "R2 D2", "C-3P0", "Anakin Skywalker", "Darth Vader", "Lando Calrissian", "Padme Amidala", "Boba Fett", "Emperor Palpatine", "Jar Jar Binks"], "type": "nominal"}}}], "width": 100}, "spacing": 0, "title": {"text": "'Star Wars' Characters Favorability Ratings", "subtitle": "By 834 respondents"}, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-7a22c6b1229dd4115e0bee06d563eda5": [{"character": "Anakin Skywalker", "rating": "Favorable", "counts": 514, "percent": 62.0}, {"character": "Anakin Skywalker", "rating": "Neutral", "counts": 135, "percent": 16.0}, {"character": "Anakin Skywalker", "rating": "Unfamiliar", "counts": 52, "percent": 6.0}, {"character": "Anakin Skywalker", "rating": "Unfavorable", "counts": 122, "percent": 15.0}, {"character": "Boba Fett", "rating": "Favorable", "counts": 291, "percent": 36.0}, {"character": "Boba Fett", "rating": "Neutral", "counts": 248, "percent": 31.0}, {"character": "Boba Fett", "rating": "Unfamiliar", "counts": 132, "percent": 16.0}, {"character": "Boba Fett", "rating": "Unfavorable", "counts": 141, "percent": 17.0}, {"character": "C-3P0", "rating": "Favorable", "counts": 703, "percent": 85.0}, {"character": "C-3P0", "rating": "Neutral", "counts": 79, "percent": 10.0}, {"character": "C-3P0", "rating": "Unfamiliar", "counts": 15, "percent": 2.0}, {"character": "C-3P0", "rating": "Unfavorable", "counts": 30, "percent": 4.0}, {"character": "Darth Vader", "rating": "Favorable", "counts": 481, "percent": 58.0}, {"character": "Darth Vader", "rating": "Neutral", "counts": 84, "percent": 10.0}, {"character": "Darth Vader", "rating": "Unfamiliar", "counts": 10, "percent": 1.0}, {"character": "Darth Vader", "rating": "Unfavorable", "counts": 251, "percent": 30.0}, {"character": "Emperor Palpatine", "rating": "Favorable", "counts": 253, "percent": 31.0}, {"character": "Emperor Palpatine", "rating": "Neutral", "counts": 213, "percent": 26.0}, {"character": "Emperor Palpatine", "rating": "Unfamiliar", "counts": 156, "percent": 19.0}, {"character": "Emperor Palpatine", "rating": "Unfavorable", "counts": 192, "percent": 24.0}, {"character": "Han Solo", "rating": "Favorable", "counts": 761, "percent": 92.0}, {"character": "Han Solo", "rating": "Neutral", "counts": 44, "percent": 5.0}, {"character": "Han Solo", "rating": "Unfamiliar", "counts": 15, "percent": 2.0}, {"character": "Han Solo", "rating": "Unfavorable", "counts": 9, "percent": 1.0}, {"character": "Jar Jar Binks", "rating": "Favorable", "counts": 242, "percent": 29.0}, {"character": "Jar Jar Binks", "rating": "Neutral", "counts": 164, "percent": 20.0}, {"character": "Jar Jar Binks", "rating": "Unfamiliar", "counts": 109, "percent": 13.0}, {"character": "Jar Jar Binks", "rating": "Unfavorable", "counts": 306, "percent": 37.0}, {"character": "Lando Calrissian", "rating": "Favorable", "counts": 365, "percent": 45.0}, {"character": "Lando Calrissian", "rating": "Neutral", "counts": 236, "percent": 29.0}, {"character": "Lando Calrissian", "rating": "Unfamiliar", "counts": 148, "percent": 18.0}, {"character": "Lando Calrissian", "rating": "Unfavorable", "counts": 71, "percent": 9.0}, {"character": "Luke Skywalker", "rating": "Favorable", "counts": 771, "percent": 93.0}, {"character": "Luke Skywalker", "rating": "Neutral", "counts": 38, "percent": 5.0}, {"character": "Luke Skywalker", "rating": "Unfamiliar", "counts": 6, "percent": 1.0}, {"character": "Luke Skywalker", "rating": "Unfavorable", "counts": 16, "percent": 2.0}, {"character": "Obi Wan Kenobi", "rating": "Favorable", "counts": 750, "percent": 91.0}, {"character": "Obi Wan Kenobi", "rating": "Neutral", "counts": 43, "percent": 5.0}, {"character": "Obi Wan Kenobi", "rating": "Unfamiliar", "counts": 17, "percent": 2.0}, {"character": "Obi Wan Kenobi", "rating": "Unfavorable", "counts": 15, "percent": 2.0}, {"character": "Padme Amidala", "rating": "Favorable", "counts": 351, "percent": 43.0}, {"character": "Padme Amidala", "rating": "Neutral", "counts": 207, "percent": 25.0}, {"character": "Padme Amidala", "rating": "Unfamiliar", "counts": 164, "percent": 20.0}, {"character": "Padme Amidala", "rating": "Unfavorable", "counts": 92, "percent": 11.0}, {"character": "Princess Leia Organa", "rating": "Favorable", "counts": 757, "percent": 91.0}, {"character": "Princess Leia Organa", "rating": "Neutral", "counts": 48, "percent": 6.0}, {"character": "Princess Leia Organa", "rating": "Unfamiliar", "counts": 8, "percent": 1.0}, {"character": "Princess Leia Organa", "rating": "Unfavorable", "counts": 18, "percent": 2.0}, {"character": "R2 D2", "rating": "Favorable", "counts": 747, "percent": 90.0}, {"character": "R2 D2", "rating": "Neutral", "counts": 57, "percent": 7.0}, {"character": "R2 D2", "rating": "Unfamiliar", "counts": 10, "percent": 1.0}, {"character": "R2 D2", "rating": "Unfavorable", "counts": 16, "percent": 2.0}, {"character": "Yoda", "rating": "Favorable", "counts": 749, "percent": 91.0}, {"character": "Yoda", "rating": "Neutral", "counts": 51, "percent": 6.0}, {"character": "Yoda", "rating": "Unfamiliar", "counts": 10, "percent": 1.0}, {"character": "Yoda", "rating": "Unfavorable", "counts": 16, "percent": 2.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
