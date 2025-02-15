@@ -11,6 +11,10 @@ Below are the two visualizations I made using Matplotlib.
 
 # Data Visualization Homework 4
 
-Below is the alt theme visualization.
+Below is the Altair theme visualization.
 
-## Visualization
+## Visualization  
+[View Visualization HTML](Lab%205/alt_theme.html)  
+
+![Visualization](Lab%205/visualization.png)
+
